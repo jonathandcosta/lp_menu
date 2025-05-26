@@ -452,3 +452,14 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
 }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .step:not(:last-child)::after {
+    display: none;
+  }
+}
