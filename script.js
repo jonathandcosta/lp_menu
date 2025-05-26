@@ -28,28 +28,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         top: targetElement.offsetTop - 80,
         behavior: 'smooth',
       });
-
-      // Close mobile menu if open
-      const navLinks = document.querySelector('.nav-links');
-      if (window.innerWidth <= 768 && navLinks.style.display === 'flex') {
-        navLinks.style.display = 'none';
-      }
     }
   });
 });
 
-// Sticky Header
-window.addEventListener('scroll', function () {
-  const header = document.querySelector('header');
-  if (window.scrollY > 100) {
-    header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.1)';
-  } else {
-    header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-  }
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const overlay = document.getElementById('overlay');
+
+menuToggle.addEventListener('click', function () {
+  mobileMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
 });
 
-// Mobile Menu Toggle
-document.querySelector('.mobile-menu').addEventListener('click', function () {
-  const navLinks = document.querySelector('.nav-links');
-  navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+overlay.addEventListener('click', function () {
+  mobileMenu.classList.remove('active');
+  overlay.classList.remove('active');
 });
