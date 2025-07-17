@@ -377,6 +377,18 @@ header {
   position: absolute;
   top: -15px;
   right: 20px;
+  background-color: var(--primary);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.popular-badge-promo {
+  position: absolute;
+  top: -15px;
+  right: 20px;
   background-color: var(--secondary);
   color: white;
   padding: 5px 15px;
