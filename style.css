@@ -451,6 +451,10 @@ header {
   font-weight: 500;
 }
 
+.faq-question:hover {
+  background-color: var(--primary);
+}
+
 .faq-answer {
   padding: 0 20px;
   max-height: 0;
