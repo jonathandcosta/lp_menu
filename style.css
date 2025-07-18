@@ -542,3 +542,13 @@ footer {
   color: #aaa;
   font-size: 0.9rem;
 }
+
+.copyright a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+  color: white;
+}
